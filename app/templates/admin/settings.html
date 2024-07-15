@@ -1,0 +1,26 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Настройки{% endblock %}
+
+
+{% block body %}
+
+<form method="post" class="p-3">
+
+  {{ form.csrf_token }}
+
+  <div class="mb-3">
+    {{ form.title.label(class='form-label') }}
+    {{ form.title(class='form-control') }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.description.label(class='form-label') }}
+    {{ form.description(class='form-control') }}
+  </div>
+
+  <p>{{ form.submit(class='btn btn-primary') }}</p>
+
+</form>
+
+{% endblock %}

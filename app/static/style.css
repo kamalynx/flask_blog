@@ -1,0 +1,120 @@
+:root {
+  --global-radius: 3px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font: 100%/1.5 sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  color: #333;
+  margin: 0;
+}
+
+@media screen and (min-width: 40em) {
+  body {
+    padding: 1vmax;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+  line-height: 1.3;
+}
+
+blockquote {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid lightblue;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #36c;
+}
+
+a:hover {
+  color: #f03;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 60rem;
+  min-height: 100vh;
+  background-color: #fefefe;
+  padding: 5px;
+  border-radius: var(--global-radius);
+}
+
+.site-header {
+  padding: 1rem;
+  background-color: steelblue;
+  color: #fefefe;
+  border-radius: var(--global-radius);
+}
+
+.site-header h1 {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 40em) {
+  .site-header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+.site-header a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.article {
+  margin-bottom: 2rem;
+}
+
+.article .title {
+  margin: 0 0 1rem 0;
+}
+
+.article .date {
+  font-size: smaller;
+}
+
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: GhostWhite;
+  border-radius: var(--global-radius);
+}
+
+pre, code {
+  border-radius: var(--global-radius);
+}

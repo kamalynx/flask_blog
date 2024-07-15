@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% if description %}{% block head %}<meta name="description" content="{{ description }}">{% endblock %}{% endif %}
+
+{% block body %}
+{% for article in articles %}
+  <article class="article">
+    <time class="date">{{ article.date_creation }}</time>
+    <h2 class="title">
+      <a href="{{ url_for('article', slug=article.slug) }}">
+        {{ article.title }}
+      </a>
+    </h2>
+    <section>
+      {{ article.description }}
+    </section>
+  </article>
+{% endfor %}
+
+{% endblock %}

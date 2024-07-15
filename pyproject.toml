@@ -1,0 +1,22 @@
+[tool.poetry]
+package-mode = false
+name = "blog"
+authors = ["kamalynx <kamalynxpro@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+peewee = "^3.17.5"
+flask-minify = {extras = ["go"], version = "^0.47"}
+markdown = "^3.6"
+httpx = "^0.27.0"
+flask-httpauth = "^4.8.0"
+waitress = "^3.0.0"
+flask-wtf = "^1.2.1"
+psycopg2-binary = "^2.9.9"
+pymdown-extensions = "^10.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block head %}
+{% if article.description %}<meta name="description" content="{{ article.description }}">{% endif %}
+<link rel="stylesheet" href="{{ url_for('static', filename='monokai-sublime.min.css') }}">
+{% endblock %}
+
+{% block body %}
+<article class="article">
+  <header>
+    <time datetime="{{ article.created_at }}" class="date">
+      {{ article.date_creation }}
+    </time>
+    <h1 class="title">
+      {{ article.title }}
+    </h1>
+  </header>
+  <section>
+    {{ article.content_as_markdown|safe }}
+  </section>
+</article>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='highlight.min.js') }}"></script>
+<script>hljs.highlightAll();</script>
+{% endblock %}

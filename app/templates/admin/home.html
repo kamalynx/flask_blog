@@ -1,0 +1,17 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Список статей{% endblock %}
+
+{% block body %}
+
+<table class="table">
+  <tbody>
+  {% for article in articles %}
+    <tr>
+      <td><strong><a href="{{ url_for('admin.edit_article', id=article.id) }}">{{ article }}</a></strong></td>
+      <td><strong><a href="{{ url_for('admin.delete_article', id=article.id) }}">Удалить</a></strong></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

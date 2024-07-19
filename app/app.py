@@ -18,6 +18,7 @@ def create_app():
 
     app = Flask(__name__, instance_path=DATA_DIR)
     app.config['DATABASE_URL'] = f'sqlite:///{DATA_DIR}/db.sqlite3'
+    app.config['CACHE_TYPE'] = 'SimpleCache'
     # ~ app.config['DATABASE_URL'] = 'postgresql://blog:blog@localhost:5433/blog'
     app.config.from_pyfile(DATA_DIR / 'config.py', silent=True)
 
